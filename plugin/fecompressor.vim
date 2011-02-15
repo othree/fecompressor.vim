@@ -45,7 +45,7 @@ function Css_compress ()
             cal system( 'yuicompressor '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.minfname.' &')
         endif
     endif
-end
+endfunction
 
 autocmd FileWritePost,BufWritePost *.js :call Fe_compress()
 autocmd FileWritePost,BufWritePost *.css :call Fe_compress()
