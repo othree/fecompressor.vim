@@ -13,6 +13,10 @@ function Js_css_compress ()
         if executable('lessc')
             cal system( 'lessc '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.nam.'.css &')
         endif
+    elseif ext == 'scss'
+        if executable('sass')
+            cal system( 'sass '.cwd.'/'.nam.'.'.ext.' > '.cwd.'/'.nam.'.css &')
+        endif
     else
         if filewritable(cwd.'/'.minfname)
             if ext == 'js' && executable('closure-compiler')
@@ -26,4 +30,5 @@ endfunction
 autocmd FileWritePost,BufWritePost *.js :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.css :call Js_css_compress()
 autocmd FileWritePost,BufWritePost *.less :call Js_css_compress()
+autocmd FileWritePost,BufWritePost *.scss :call Js_css_compress()
 
