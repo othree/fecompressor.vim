@@ -18,6 +18,8 @@ or
     cd fecompressor.vim
     make install
 
+[fecompile.vim]:http://www.vim.org/scripts/script.php?script_id=3453
+
 ## Usage
 
 Make sure your system have installed the compressor you need. The plugin will 
@@ -32,14 +34,17 @@ check if the following command is available.
 Then it will do the following stuff for you.
 
 For less and scss:
+
 1. Convert the file to css.
 2. Do stuffs for css file.
 
 For css and js file:
+
 1. Check if the target output file is exist.
 2. If exists, compress the file.
 
 The target output file have the following rule:
+
 - ```foo_src.css -> foo.css```
 - ```bar.css -> bar.min.css```
 
