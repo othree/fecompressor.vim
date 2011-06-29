@@ -45,6 +45,8 @@ if executable('uglifyjs') || executable('closure-compiler') || executable('yuico
         let s:jscompressor = 'uglifyjs'
     elseif executable('closure-compiler')
         let s:jscompressor = 'closure-compiler --js'
+    elseif executable('closure')
+        let s:jscompressor = 'closure --js'
     elseif executable('yuicompressor')
         let s:jscompressor = 'yuicompressor'
     endif
