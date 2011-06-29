@@ -39,7 +39,7 @@ function Css_compress ()
     endif
 endfunction
 
-if executable('uglifyjs') || executable('closure-compiler') || executable('yuicompressor')
+if executable('uglifyjs') || executable('closure-compiler') || executable('closure') || executable('yuicompressor')
     autocmd FileWritePost,BufWritePost *.js :call Fe_compress()
     if executable('uglifyjs')
         let s:jscompressor = 'uglifyjs'
