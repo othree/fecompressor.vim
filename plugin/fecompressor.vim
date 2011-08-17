@@ -1,6 +1,6 @@
 " yuicompressor and closure-compiler and less and scss: 
 " http://blog.othree.net/log/2009/12/26/javascript-on-vim/
-function Fe_compress ()
+function! Fe_compress ()
     let cwd = expand('<afile>:p:h')
     let nam = expand('<afile>:t:r')
     let ext = expand('<afile>:e')
@@ -25,7 +25,7 @@ function Fe_compress ()
     endif
 endfunction
 
-function Css_compress ()
+function! Css_compress ()
     let cwd = expand('<afile>:p:h')
     let nam = expand('<afile>:t:r')
     let ext = "css"
