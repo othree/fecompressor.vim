@@ -61,6 +61,6 @@ endif
 if executable('sass')
     autocmd FileWritePost,BufWritePost *.scss :call Fe_compress()
 endif
-if executable('css')
-    autocmd FileWritePost,BufWritePost *.css :call Fe_compress()
+if executable('yuicompressor')
+    autocmd FileWritePost,BufWritePost *.css :call Css_compress()
 endif
